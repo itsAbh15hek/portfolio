@@ -3,6 +3,7 @@
   --blue: #a9e3e3;
   --white: #fff;
   --black: #000;
+  --dark-grey: rgb(37, 37, 37);
 }
 html {
   scroll-behavior: smooth;
@@ -45,7 +46,7 @@ nav::after {
   left: 0;
 }
 .navBg {
-  background: var(--black);
+  background: var(--dark-grey);
 }
 nav h1 {
   font-size: 3rem;
@@ -119,11 +120,12 @@ nav ul {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 20px 3vw;
+  margin: 20px auto;
   border-radius: 25px;
   color: #fff;
   position: relative;
   padding-bottom: 20px;
+  width: 90%;
 }
 .project-scroll {
   position: absolute;
@@ -155,31 +157,58 @@ h2::after {
 }
 h2:hover::after {
   bottom: -5px;
-  height: 70px;
+  height: 105%;
 }
 
 figure {
   background-color: var(--black);
   display: flex;
-  flex-direction: column;
-  padding: 20px 40px;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  padding: 40px;
+  margin: 10px auto;
   border-radius: 5px;
-  margin: 10px;
-  align-items: center;
   width: 80%;
-  transition: transform 0.25s ease-in;
 }
-figure img {
-  width: 95%;
+.img {
+  width: 45%;
+  overflow: hidden;
 }
-figure img:hover {
-  transform: scale(1.01);
-}
-figure figcaption {
-  margin: 40px 0 25px;
-  position: relative;
+.img img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
 }
 
+figure figcaption {
+  width: 45%;
+}
+figcaption h3 {
+  margin: 0 0 10px;
+  font-size: 20px;
+  background-color: var(--blue);
+  color: var(--dark-grey);
+  font-weight: 800;
+  letter-spacing: 1.5px;
+  padding: 10px 15px;
+  text-align: center;
+}
+figcaption p {
+  margin-bottom: 20px;
+  text-align: justify;
+}
+figcaption .project-links {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+figcaption a {
+  color: white;
+  margin: 5px !important;
+}
 #contact {
   display: flex;
   width: 92vw;
@@ -197,6 +226,12 @@ figure figcaption {
   color: var(--black);
   text-shadow: none;
 }
+#contact h3 {
+  margin: 40px 0 10px;
+  font-size: 20px;
+  background-color: var(--blue);
+  padding: 10px 15px;
+}
 #contact div {
   width: 100%;
   display: flex;
@@ -204,38 +239,19 @@ figure figcaption {
   justify-content: space-around;
   margin: 40px;
 }
-#contact div img {
-  margin: 10px 10px 0 10px;
-}
-#contact img:hover {
-  transform: scale(1.1);
-}
-.n {
-  width: 90px;
-  padding-top: 10px;
-}
-.i {
-  width: 103px;
-}
-footer {
-  padding: 40px;
-  background-color: rgba(0, 0, 0, 0.288);
-  display: block;
-  margin-top: 40px;
-}
-footer p {
-  display: block;
-  text-align: center;
-}
+
 .phone {
   position: relativae;
 }
 .fa-phone-square-alt {
   visibility: visible;
+  user-select: none;
 }
 
 .c-icon {
   color: var(--black);
+
+  margin: 2px 2px;
 }
 i {
   transition: transform 0.18s ease-out;
@@ -249,50 +265,22 @@ i:hover {
   position: absolute;
   background: var(--black);
   color: var(--white);
-  padding: 28px 15px;
+  padding: 10px 15px;
   font-size: 12px;
   letter-spacing: 1px;
   border-radius: 3px;
-  transform: translate(-28%, -107.3%);
+  transform: translate(-25%, -330%);
 }
 
-@media (max-width: 650px) {
-  nav {
-    flex-direction: column;
-    height: 100px;
-    align-items: center;
-    padding: 10px;
-  }
-  nav ul {
-    margin: 0;
-  }
-  nav ul li {
-    margin-bottom: 10px;
-  }
-
-  #welcome-section h1 {
-    font-size: 4rem;
-  }
-  figure figcaption a {
-    font-size: 1rem;
-  }
-  figcaption::before {
-    content: "<";
-    position: absolute;
-    font-size: 1.5rem;
-    left: 11px;
-    transform: translateY(-19%);
-    color: transparent;
-  }
-
-  figcaption::after {
-    content: "/>";
-    position: absolute;
-    font-size: 1.5rem;
-    right: 13px;
-    transform: translateY(-19%);
-    color: transparent;
-  }
+footer {
+  padding: 40px;
+  background-color: rgba(0, 0, 0, 0.288);
+  display: block;
+  margin-top: 40px;
+}
+footer p {
+  display: block;
+  text-align: center;
 }
 
 .btn-shadow {
@@ -308,6 +296,7 @@ i:hover {
   box-shadow: inset 0px 0px 0px var(--blue);
   font-size: 0.9rem;
   transition: box-shadow 0.25s ease-in-out;
+  text-align: center;
 }
 .btn-shadow:hover {
   box-shadow: inset 0px -50px 0px var(--blue);
@@ -319,12 +308,19 @@ form {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  width: 85%;
+}
+form label {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 form input,
 form textarea {
   border: none;
   border-bottom: 2px solid rgb(214, 214, 214);
-  width: 70vw;
+  width: 100%;
   min-width: 300px;
   padding: 5px 15px;
   margin: 10px 15px;
@@ -343,4 +339,65 @@ form input:focus,
 form textarea:focus {
   outline: none;
   border-bottom: 2px solid var(--blue);
+}
+
+#submit-btn {
+  margin: 20px auto !important;
+  width: 80%;
+}
+
+.hamburger {
+  display: none;
+}
+
+@media (max-width: 850px) {
+  nav {
+    align-items: center;
+    padding: 10px;
+  }
+  nav ul {
+    display: none;
+    position: absolute;
+  }
+  nav ul li a {
+    font-size: 12px !important;
+    padding: 5px 12px !important;
+    letter-spacing: 1.5px !important;
+  }
+  .hamburger {
+    color: var(--blue);
+    margin-right: 20px;
+    display: block;
+    position: absolute;
+    right: 10px;
+  }
+
+  figure {
+    flex-direction: column;
+    align-items: center;
+  }
+  .img {
+    width: 90%;
+  }
+
+  figure figcaption {
+    width: 90%;
+    margin-bottom: 25px;
+  }
+
+  #welcome-section h1 {
+    font-size: 3rem;
+  }
+  #welcome-section p {
+    font-size: 0.9rem;
+    letter-spacing: 0.2rem;
+    padding-top: 45px;
+  }
+  #contact h2 {
+    font-size: 2rem;
+  }
+  #contact h3 {
+    margin: 20px 0 10px;
+    font-size: 15px;
+  }
 }

@@ -18,7 +18,7 @@
   </head>
   <body>
     <nav id="navbar">
-      <a href="#"><h1>Abh15hek</h1></a>
+      <a href="#" id="navH1"><h1>Abh15hek</h1></a>
       <ul>
         <li><a class="btn-shadow" href="#welcome-section">About</a></li>
         <li>
@@ -28,6 +28,7 @@
           <a class="btn-shadow" href="#contact-scroll-assist">Contact Me</a>
         </li>
       </ul>
+      <div class="hamburger"><i class="fas fa-bars fa-2x"></i></div>
     </nav>
 
     <main id="welcome-section">
@@ -40,75 +41,92 @@
       >
       <h2>Projects</h2>
       <figure>
-        <a
-          class="project-tile"
-          href="https://codepen.io/freeCodeCamp/full/zNqgVx"
-        >
+        <div class="img">
           <img
             src="https://cdn.freecodecamp.org/testable-projects-fcc/images/tribute.jpg"
             alt="norman borlaug"
           />
-        </a>
+        </div>
+
         <figcaption>
-          <a
-            class="project-tile btn-shadow"
-            href="https://codepen.io/freeCodeCamp/full/zNqgVx"
-            >Tribute Page</a
-          >
+          <h3>Project Name</h3>
+          <div class="paragraphs">
+            <p>
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Maxime
+              voluptate veniam velit odit id. Ipsum facere fugiat delectus
+              reprehenderit asperiores.
+            </p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque saepe voluptates consectetur vero minima, impedit commodi cupiditate molestiae accusamus quas officiis illum cumque modi ab dignissimos odio corporis ex nihil?</p>
+          </div>
+          <div class="project-links">
+            <a href="#"><i class="fab fa-github fa-2x"></i></a>
+            <a
+              class="btn-shadow"
+              href="#"
+              >Live Site</a
+            >
+            <a href="#"><i class="fas fa-play-circle fa-2x"></i></i></a>
+          </div>
         </figcaption>
       </figure>
       <figure>
-        <a
-          class="project-tile"
-          href="https://codepen.io/freeCodeCamp/full/qRZeGZ"
-        >
-          <img
-            src="https://cdn.freecodecamp.org/testable-projects-fcc/images/random-quote-machine.png"
-            alt="quote"
-          />
-        </a>
+
         <figcaption>
-          <a
-            class="project-tile btn-shadow"
-            href="https://codepen.io/freeCodeCamp/full/qRZeGZ"
-            >Random Quote Machine</a
-          >
+          <h3>Project Name</h3>
+          <div class="paragraphs">
+            <p>
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Maxime
+              voluptate veniam velit odit id. Ipsum facere fugiat delectus
+              reprehenderit asperiores.
+            </p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque saepe voluptates consectetur vero minima, impedit commodi cupiditate molestiae accusamus quas officiis illum cumque modi ab dignissimos odio corporis ex nihil?</p>
+          </div>
+          <div class="project-links">
+            <a href="#"><i class="fab fa-github fa-2x"></i></a>
+            <a
+              class="btn-shadow"
+              href="#"
+              >Live Site</a
+            >
+            <a href="#"><i class="fas fa-play-circle fa-2x"></i></i></a>
+          </div>
         </figcaption>
+        <div class="img">
+          <img
+            src="https://cdn.freecodecamp.org/testable-projects-fcc/images/tribute.jpg"
+            alt="norman borlaug"
+          />
+        </div>
+
+        
       </figure>
       <figure>
-        <a
-          class="project-tile"
-          href="https://codepen.io/freeCodeCamp/full/wgGVVX"
-        >
+        <div class="img">
           <img
-            src="https://cdn.freecodecamp.org/testable-projects-fcc/images/calc.png"
-            alt="calculator"
+            src="https://cdn.freecodecamp.org/testable-projects-fcc/images/tribute.jpg"
+            alt="norman borlaug"
           />
-        </a>
+        </div>
+
         <figcaption>
-          <a
-            class="project-tile btn-shadow"
-            href="https://codepen.io/freeCodeCamp/full/wgGVVX"
-            >JavaScript Calculator</a
-          >
-        </figcaption>
-      </figure>
-      <figure>
-        <a
-          class="project-tile"
-          href="https://codepen.io/freeCodeCamp/full/mVEJag"
-        >
-          <img
-            src="https://cdn.freecodecamp.org/testable-projects-fcc/images/map.jpg"
-            alt="Map data"
-          />
-        </a>
-        <figcaption>
-          <a
-            class="project-tile btn-shadow"
-            href="https://codepen.io/freeCodeCamp/full/mVEJag"
-            >Map Data Accross the Globe</a
-          >
+          <h3>Project Name</h3>
+          <div class="paragraphs">
+            <p>
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Maxime
+              voluptate veniam velit odit id. Ipsum facere fugiat delectus
+              reprehenderit asperiores.
+            </p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque saepe voluptates consectetur vero minima, impedit commodi cupiditate molestiae accusamus quas officiis illum cumque modi ab dignissimos odio corporis ex nihil?</p>
+          </div>
+          <div class="project-links">
+            <a href="#"><i class="fab fa-github fa-2x"></i></a>
+            <a
+              class="btn-shadow"
+              href="#"
+              >Live Site</a
+            >
+            <a href="#"><i class="fas fa-play-circle fa-2x"></i></i></a>
+          </div>
         </figcaption>
       </figure>
     </section>
@@ -147,7 +165,12 @@
         <label>
           <textarea name="message" placeholder="Message"></textarea>
         </label>
-        <button type="submit" value="Send Message" class="btn-shadow">
+        <button
+          type="submit"
+          value="Send Message"
+          id="submit-btn"
+          class="btn-shadow"
+        >
           Send
         </button>
       </form>

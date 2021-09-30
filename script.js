@@ -1,9 +1,11 @@
 const body = document.querySelector("nav");
 const phone = document.querySelector(".phone");
 const phoneNmb = document.querySelector(".phone-nmb");
+const hamburger = document.querySelector(".hamburger");
 const phoneIcon = document.querySelector(".fa-phone-square-alt");
 
-let isActive = false;
+let isNumActive = false;
+let isMenuActive = false;
 
 const scrolled = () => {
   if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
@@ -13,32 +15,28 @@ const scrolled = () => {
   }
 };
 const showNmb = () => {
-  isActive = true;
-  if (isActive) {
+  isNumActive = !isNumActive;
+  if (isNumActive) {
     phoneNmb.style.visibility = "visible";
-    phoneIcon.style.visibility = "hidden";
   }
-  if (!isActive) {
+  if (!isNumActive) {
     phoneNmb.style.visibility = "hidden";
-    phoneIcon.style.visibility = "visible";
   }
 };
-const hideNmb = () => {
-  isActive = false;
-  if (isActive) {
-    phoneNmb.style.visibility = "visible";
-    phoneIcon.style.visibility = "hidden";
+const showMenu = () => {
+  isMenuActive = !isMenuActive;
+  if (isMenuActive) {
+    document.querySelector("ul").style.display = "flex";
+    document.querySelector("#navH1").style.display = "none";
+    hamburger.children[0].classList = "fas fa-times fa-2x";
   }
-  if (!isActive) {
-    phoneNmb.style.visibility = "hidden";
-    phoneIcon.style.visibility = "visible";
+  if (!isMenuActive) {
+    document.querySelector("ul").style.display = "none";
+    document.querySelector("#navH1").style.display = "block";
+    hamburger.children[0].classList = "fas fa-bars fa-2x";
   }
 };
 
 window.onscroll = () => scrolled();
-phone.addEventListener("click", () => {
-  showNmb();
-});
-phone.addEventListener("dblclick", () => {
-  hideNmb();
-});
+phone.addEventListener("click", showNmb);
+hamburger.addEventListener("click", showMenu);
