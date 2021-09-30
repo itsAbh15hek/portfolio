@@ -1,0 +1,346 @@
+:root {
+  --grey: #434342;
+  --blue: #a9e3e3;
+  --white: #fff;
+  --black: #000;
+}
+html {
+  scroll-behavior: smooth;
+}
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  list-style: none;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  color: var(--white);
+  background: linear-gradient(to right, rgb(56, 56, 56), #000);
+  position: relative;
+}
+nav {
+  position: fixed;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: 10px 40px;
+  background-color: transparent;
+  color: var(--white);
+  align-items: center;
+  height: 60px;
+  margin-top: 0px;
+  z-index: 6;
+  transition: background 0.8s;
+}
+nav::after {
+  content: "";
+  display: block;
+  background: var(--blue);
+  height: 5px;
+  width: 100vw;
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+}
+.navBg {
+  background: var(--black);
+}
+nav h1 {
+  font-size: 3rem;
+  font-family: "Lobster", cursive;
+  font-weight: 800;
+  /* text-shadow: 0px 3px 0px var(--blue); */
+  transform: translate(0, -0.1rem);
+  color: var(--white);
+  transition: transform 0.3s;
+}
+nav a {
+  color: var(--white);
+}
+nav h1:hover {
+  transform: translate(0, 0.2px);
+}
+nav ul {
+  display: flex;
+  margin-right: 60px;
+}
+
+#welcome-section {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#welcome-section div {
+  text-align: center;
+  padding: 10px 25px;
+  position: relative;
+}
+#welcome-section div::after {
+  content: "";
+  background-color: var(--blue);
+  width: 100%;
+  height: 5px;
+  position: absolute;
+  left: 0;
+  bottom: -15px;
+  animation-name: headings;
+  animation-timing-function: ease-in-out;
+  animation-duration: 1.55s;
+  border-radius: 5px;
+}
+@keyframes headings {
+  0% {
+    width: 0px;
+    left: 50%;
+  }
+  100% {
+    width: 100%;
+    left: 0;
+  }
+}
+#welcome-section h1 {
+  transform: translateY(0px);
+  font-size: 6rem;
+  font-family: "Lobster", cursive;
+}
+#welcome-section p {
+  color: var(--blue);
+  font-size: 1.1rem;
+  letter-spacing: 0.6rem;
+  padding-top: 55px;
+}
+#projects {
+  background-color: var(--grey);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 20px 3vw;
+  border-radius: 25px;
+  color: #fff;
+  position: relative;
+  padding-bottom: 20px;
+}
+.project-scroll {
+  position: absolute;
+  top: -140px;
+  visibility: hidden;
+}
+
+h2 {
+  margin: 30px 0 50px 0;
+  font-size: 3rem;
+  font-weight: 800;
+  z-index: 5;
+  position: relative;
+  color: var(--white);
+  text-shadow: 1px 1px var(--grey);
+}
+h2::after {
+  content: "";
+  background-color: var(--blue);
+  width: 110%;
+  height: 8px;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: -5px;
+  z-index: -1;
+
+  transition: 0.45s ease-in-out;
+}
+h2:hover::after {
+  bottom: -5px;
+  height: 70px;
+}
+
+figure {
+  background-color: var(--black);
+  display: flex;
+  flex-direction: column;
+  padding: 20px 40px;
+  border-radius: 5px;
+  margin: 10px;
+  align-items: center;
+  width: 80%;
+  transition: transform 0.25s ease-in;
+}
+figure img {
+  width: 95%;
+}
+figure img:hover {
+  transform: scale(1.01);
+}
+figure figcaption {
+  margin: 40px 0 25px;
+  position: relative;
+}
+
+#contact {
+  display: flex;
+  width: 92vw;
+  padding: 30px 50px;
+  box-sizing: border-box;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  background: var(--white);
+  margin: auto;
+  border-radius: 25px;
+  position: relative;
+  color: var(--black);
+}
+#contact h2 {
+  color: var(--black);
+  text-shadow: none;
+}
+#contact div {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin: 40px;
+}
+#contact div img {
+  margin: 10px 10px 0 10px;
+}
+#contact img:hover {
+  transform: scale(1.1);
+}
+.n {
+  width: 90px;
+  padding-top: 10px;
+}
+.i {
+  width: 103px;
+}
+footer {
+  padding: 40px;
+  background-color: rgba(0, 0, 0, 0.288);
+  display: block;
+  margin-top: 40px;
+}
+footer p {
+  display: block;
+  text-align: center;
+}
+.phone {
+  position: relativae;
+}
+.fa-phone-square-alt {
+  visibility: visible;
+}
+
+.c-icon {
+  color: var(--black);
+}
+i {
+  transition: transform 0.18s ease-out;
+}
+i:hover {
+  cursor: pointer;
+  transform: scale(1.05);
+}
+.phone-nmb {
+  visibility: hidden;
+  position: absolute;
+  background: var(--black);
+  color: var(--white);
+  padding: 28px 15px;
+  font-size: 12px;
+  letter-spacing: 1px;
+  border-radius: 3px;
+  transform: translate(-28%, -107.3%);
+}
+
+@media (max-width: 650px) {
+  nav {
+    flex-direction: column;
+    height: 100px;
+    align-items: center;
+    padding: 10px;
+  }
+  nav ul {
+    margin: 0;
+  }
+  nav ul li {
+    margin-bottom: 10px;
+  }
+
+  #welcome-section h1 {
+    font-size: 4rem;
+  }
+  figure figcaption a {
+    font-size: 1rem;
+  }
+  figcaption::before {
+    content: "<";
+    position: absolute;
+    font-size: 1.5rem;
+    left: 11px;
+    transform: translateY(-19%);
+    color: transparent;
+  }
+
+  figcaption::after {
+    content: "/>";
+    position: absolute;
+    font-size: 1.5rem;
+    right: 13px;
+    transform: translateY(-19%);
+    color: transparent;
+  }
+}
+
+.btn-shadow {
+  margin-right: 20px;
+  background: #000;
+  border: var(--blue) 1px solid;
+  box-sizing: border-box;
+  color: var(--white);
+  text-shadow: 1px 1px 1px var(--black);
+  letter-spacing: 3px;
+  padding: 10px 15px;
+  border-radius: 3px;
+  box-shadow: inset 0px 0px 0px var(--blue);
+  font-size: 0.9rem;
+  transition: box-shadow 0.25s ease-in-out;
+}
+.btn-shadow:hover {
+  box-shadow: inset 0px -50px 0px var(--blue);
+}
+
+/* form */
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+form input,
+form textarea {
+  border: none;
+  border-bottom: 2px solid rgb(214, 214, 214);
+  width: 70vw;
+  min-width: 300px;
+  padding: 5px 15px;
+  margin: 10px 15px;
+  box-sizing: border-box;
+}
+form input::placeholder,
+form textarea::placeholder {
+  color: rgb(195, 195, 195);
+}
+
+form textarea {
+  height: 100px;
+}
+
+form input:focus,
+form textarea:focus {
+  outline: none;
+  border-bottom: 2px solid var(--blue);
+}

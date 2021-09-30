@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lobster&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://kit.fontawesome.com/77367a8755.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>Abhishek Singh</title>
+  </head>
+  <body>
+    <nav id="navbar">
+      <a href="#"><h1>Abh15hek</h1></a>
+      <ul>
+        <li><a class="btn-shadow" href="#welcome-section">About</a></li>
+        <li>
+          <a class="btn-shadow" href="#project-scroll-assist">Projects</a>
+        </li>
+        <li>
+          <a class="btn-shadow" href="#contact-scroll-assist">Contact Me</a>
+        </li>
+      </ul>
+    </nav>
+
+    <main id="welcome-section">
+      <div><h1>Abhishek Singh</h1></div>
+      <p>Front-End Web Developer</p>
+    </main>
+    <section id="projects">
+      <span id="project-scroll-assist" class="project-scroll"
+        >Scroll Assist</span
+      >
+      <h2>Projects</h2>
+      <figure>
+        <a
+          class="project-tile"
+          href="https://codepen.io/freeCodeCamp/full/zNqgVx"
+        >
+          <img
+            src="https://cdn.freecodecamp.org/testable-projects-fcc/images/tribute.jpg"
+            alt="norman borlaug"
+          />
+        </a>
+        <figcaption>
+          <a
+            class="project-tile btn-shadow"
+            href="https://codepen.io/freeCodeCamp/full/zNqgVx"
+            >Tribute Page</a
+          >
+        </figcaption>
+      </figure>
+      <figure>
+        <a
+          class="project-tile"
+          href="https://codepen.io/freeCodeCamp/full/qRZeGZ"
+        >
+          <img
+            src="https://cdn.freecodecamp.org/testable-projects-fcc/images/random-quote-machine.png"
+            alt="quote"
+          />
+        </a>
+        <figcaption>
+          <a
+            class="project-tile btn-shadow"
+            href="https://codepen.io/freeCodeCamp/full/qRZeGZ"
+            >Random Quote Machine</a
+          >
+        </figcaption>
+      </figure>
+      <figure>
+        <a
+          class="project-tile"
+          href="https://codepen.io/freeCodeCamp/full/wgGVVX"
+        >
+          <img
+            src="https://cdn.freecodecamp.org/testable-projects-fcc/images/calc.png"
+            alt="calculator"
+          />
+        </a>
+        <figcaption>
+          <a
+            class="project-tile btn-shadow"
+            href="https://codepen.io/freeCodeCamp/full/wgGVVX"
+            >JavaScript Calculator</a
+          >
+        </figcaption>
+      </figure>
+      <figure>
+        <a
+          class="project-tile"
+          href="https://codepen.io/freeCodeCamp/full/mVEJag"
+        >
+          <img
+            src="https://cdn.freecodecamp.org/testable-projects-fcc/images/map.jpg"
+            alt="Map data"
+          />
+        </a>
+        <figcaption>
+          <a
+            class="project-tile btn-shadow"
+            href="https://codepen.io/freeCodeCamp/full/mVEJag"
+            >Map Data Accross the Globe</a
+          >
+        </figcaption>
+      </figure>
+    </section>
+    <section id="contact">
+      <span id="contact-scroll-assist" class="project-scroll"
+        >Scroll Assist</span
+      >
+      <h2>Contact Me</h2>
+      <div>
+        <span class="c-icon phone">
+          <i class="fas fa-phone-square-alt fa-5x"></i>
+          <p class="phone-nmb">+91 9473646329</p>
+        </span>
+        <a href="mailto:itsAbh15hek@outlook.com"
+          ><span class="c-icon"
+            ><i class="fas fa-envelope-square fa-5x"></i></span
+        ></a>
+        <a href="https://www.linkedin.com/in/itsabh15hek/" target="_blank"
+          ><span class="c-icon"><i class="fab fa-linkedin fa-5x"></i></span
+        ></a>
+        <a
+          id="profile-link"
+          href="https://github.com/itsAbh15hek"
+          target="_blank"
+          ><span class="c-icon"><i class="fab fa-github-square fa-5x"></i></span
+        ></a>
+      </div>
+
+      <form action="POST" id="contact-form" name="contact" data-netlify="true">
+        <h3>Drop me a Message</h3>
+        <label><input type="text" name="name" placeholder="Name" /></label>
+        <label><input type="email" name="email" placeholder="E-mail" /></label>
+        <label><input type="text" name="email" placeholder="Subject" /></label>
+        <label>
+          <textarea name="message" placeholder="Message"></textarea>
+        </label>
+        <button type="submit" class="btn-shadow">Send</button>
+      </form>
+    </section>
+    <footer>
+      <p>&copy; Abh15hek | 2021</p>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>
