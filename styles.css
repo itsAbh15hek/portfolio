@@ -115,6 +115,40 @@ nav ul {
   letter-spacing: 0.6rem;
   padding-top: 55px;
 }
+#about {
+  background-color: var(--dark-grey);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 20px auto;
+  border-radius: 25px;
+  color: #fff;
+  position: relative;
+  padding-bottom: 20px;
+  width: 90%;
+  margin-bottom: 50px;
+}
+.about-me {
+  margin: 15px 10px 35px;
+}
+#about p {
+  color: #d1d1d1;
+  font-size: 1.3rem;
+  font-weight: 500;
+  letter-spacing: 1.5px;
+  text-align: center;
+}
+.skills {
+  color: var(--blue);
+  max-width: 590px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.skill-icon {
+  margin: 1rem 2rem;
+}
+
 #projects {
   background-color: var(--grey);
   display: flex;
@@ -127,7 +161,7 @@ nav ul {
   padding-bottom: 20px;
   width: 90%;
 }
-.project-scroll {
+.scroll-assist {
   position: absolute;
   top: -140px;
   visibility: hidden;
@@ -174,19 +208,23 @@ figure {
 }
 .img {
   width: 45%;
+  height: 400px;
   overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .img img {
   width: 100%;
   height: 100%;
-  object-fit: contain;
+  object-fit: cover;
 }
 
 figure figcaption {
   width: 45%;
 }
 figcaption h3 {
-  margin: 0 0 10px;
+  margin: 0 0 40px;
   font-size: 20px;
   background-color: var(--blue);
   color: var(--dark-grey);
@@ -301,6 +339,9 @@ footer p {
 .btn-shadow:hover {
   box-shadow: inset 0px -50px 0px var(--blue);
 }
+p {
+  line-height: 30px;
+}
 
 /* form */
 form {
@@ -384,6 +425,10 @@ form textarea:focus {
     width: 90%;
     margin-bottom: 25px;
   }
+  .img {
+    height: auto;
+    margin-bottom: 20px;
+  }
 
   #welcome-section h1 {
     font-size: 3rem;
@@ -392,6 +437,13 @@ form textarea:focus {
     font-size: 0.9rem;
     letter-spacing: 0.2rem;
     padding-top: 45px;
+  }
+  #about p {
+    font-size: 01rem;
+    font-weight: 500;
+    letter-spacing: 1.2px;
+    text-align: center;
+    margin-bottom: 20px;
   }
   #contact h2 {
     font-size: 2rem;
