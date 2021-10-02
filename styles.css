@@ -21,6 +21,20 @@ body {
   background: linear-gradient(to right, rgb(56, 56, 56), #000);
   position: relative;
 }
+body::-webkit-scrollbar {
+  width: 5px;
+}
+
+body::-webkit-scrollbar-track {
+  background-color: var(--grey);
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: #a9e3e386;
+  outline: 1px solid var(--black);
+  border-radius: 1.5rem;
+}
 nav {
   position: fixed;
   display: flex;
@@ -74,6 +88,7 @@ nav ul {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  position: relative;
 }
 
 #welcome-section div {
@@ -115,6 +130,238 @@ nav ul {
   letter-spacing: 0.6rem;
   padding-top: 55px;
 }
+.mouse-scroll {
+  color: white;
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* mouse animation */
+.mouse-scroll p {
+  font-size: 12px !important;
+  padding-top: 12px !important;
+  letter-spacing: 8px;
+  text-indent: 12px;
+  color: #ffffff;
+  animation: colorText 8s ease-out infinite, nudgeText 8s ease-out infinite;
+}
+.mouse {
+  background: #4e5559
+    linear-gradient(transparent 0%, transparent 50%, #ffffff 50%, #ffffff 100%);
+  position: relative;
+  width: 26px;
+  height: 44px;
+  border-radius: 100px;
+  background-size: 100% 200%;
+  animation: colorSlide 8s linear infinite, nudgeMouse 8s ease-out infinite;
+}
+.mouse:before,
+.mouse:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+}
+.mouse:before {
+  width: 23px;
+  height: 42px;
+  background-color: #222a30;
+  border-radius: 100px;
+}
+.mouse:after {
+  background-color: #ffffff;
+  width: 5px;
+  height: 5px;
+  border-radius: 100%;
+  animation: trackBallSlide 8s linear infinite;
+}
+@keyframes colorSlide {
+  0% {
+    background-position: 0% 100%;
+  }
+  20% {
+    background-position: 0% 0%;
+  }
+  21% {
+    background-color: #4e5559;
+  }
+  29.99% {
+    background-color: #ffffff;
+    background-position: 0% 0%;
+  }
+  30% {
+    background-color: #4e5559;
+    background-position: 0% 100%;
+  }
+  50% {
+    background-position: 0% 0%;
+  }
+  51% {
+    background-color: #4e5559;
+  }
+  59% {
+    background-color: #ffffff;
+    background-position: 0% 0%;
+  }
+  60% {
+    background-color: #4e5559;
+    background-position: 0% 100%;
+  }
+  80% {
+    background-position: 0% 0%;
+  }
+  81% {
+    background-color: #4e5559;
+  }
+  90%,
+  100% {
+    background-color: #ffffff;
+  }
+}
+@keyframes trackBallSlide {
+  0% {
+    opacity: 1;
+    transform: scale(1) translateY(-14px);
+  }
+  6% {
+    opacity: 1;
+    transform: scale(0.9) translateY(5px);
+  }
+  14% {
+    opacity: 0;
+    transform: scale(0.4) translateY(36px);
+  }
+  15%,
+  19% {
+    opacity: 0;
+    transform: scale(0.4) translateY(-14px);
+  }
+  28%,
+  29.99% {
+    opacity: 1;
+    transform: scale(1) translateY(-14px);
+  }
+  30% {
+    opacity: 1;
+    transform: scale(1) translateY(-14px);
+  }
+  36% {
+    opacity: 1;
+    transform: scale(0.9) translateY(5px);
+  }
+  44% {
+    opacity: 0;
+    transform: scale(0.4) translateY(36px);
+  }
+  45%,
+  49% {
+    opacity: 0;
+    transform: scale(0.4) translateY(-14px);
+  }
+  58%,
+  59.99% {
+    opacity: 1;
+    transform: scale(1) translateY(-14px);
+  }
+  60% {
+    opacity: 1;
+    transform: scale(1) translateY(-16px);
+  }
+  66% {
+    opacity: 1;
+    transform: scale(0.9) translateY(5px);
+  }
+  74% {
+    opacity: 0;
+    transform: scale(0.4) translateY(36px);
+  }
+  75%,
+  79% {
+    opacity: 0;
+    transform: scale(0.4) translateY(-14px);
+  }
+  88%,
+  100% {
+    opacity: 1;
+    transform: scale(1) translateY(-14px);
+  }
+}
+@keyframes nudgeMouse {
+  0% {
+    transform: translateY(0);
+  }
+  20% {
+    transform: translateY(8px);
+  }
+  30% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(8px);
+  }
+  60% {
+    transform: translateY(0);
+  }
+  80% {
+    transform: translateY(8px);
+  }
+  90% {
+    transform: translateY(0);
+  }
+}
+@keyframes nudgeText {
+  0% {
+    transform: translateY(0);
+  }
+  20% {
+    transform: translateY(2px);
+  }
+  30% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(2px);
+  }
+  60% {
+    transform: translateY(0);
+  }
+  80% {
+    transform: translateY(2px);
+  }
+  90% {
+    transform: translateY(0);
+  }
+}
+@keyframes colorText {
+  21% {
+    color: #4e5559;
+  }
+  30% {
+    color: #ffffff;
+  }
+  51% {
+    color: #4e5559;
+  }
+  60% {
+    color: #ffffff;
+  }
+  81% {
+    color: #4e5559;
+  }
+  90% {
+    color: #ffffff;
+  }
+}
+
+/* mouse animation */
+
 #about {
   background-color: var(--dark-grey);
   display: flex;
@@ -442,6 +689,9 @@ form textarea:focus {
     font-size: 0.9rem;
     letter-spacing: 0.2rem;
     padding-top: 45px;
+  }
+  .mouse-scroll p {
+    text-indent: 2.5px;
   }
   #about p {
     font-size: 01rem;
