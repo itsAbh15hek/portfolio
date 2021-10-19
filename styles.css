@@ -147,7 +147,7 @@ nav ul {
   letter-spacing: 8px;
   text-indent: 12px;
   color: #ffffff;
-  animation: colorText 8s ease-out infinite, nudgeText 8s ease-out infinite;
+  animation: text 2.5s ease-out infinite;
 }
 .mouse {
   background: #4e5559
@@ -157,7 +157,7 @@ nav ul {
   height: 44px;
   border-radius: 100px;
   background-size: 100% 200%;
-  animation: colorSlide 8s linear infinite, nudgeMouse 8s ease-out infinite;
+  animation: colorSlide 2.5s linear infinite, nudgeMouse 2.5s ease-out infinite;
 }
 .mouse:before,
 .mouse:after {
@@ -180,49 +180,28 @@ nav ul {
   width: 5px;
   height: 5px;
   border-radius: 100%;
-  animation: trackBallSlide 8s linear infinite;
+  animation: trackBallSlide 2.5s linear infinite;
 }
 @keyframes colorSlide {
   0% {
+    background-color: #fff;
     background-position: 0% 100%;
   }
-  20% {
-    background-position: 0% 0%;
-  }
-  21% {
-    background-color: #4e5559;
-  }
-  29.99% {
-    background-color: #ffffff;
-    background-position: 0% 0%;
-  }
-  30% {
+  15% {
     background-color: #4e5559;
     background-position: 0% 100%;
   }
-  50% {
+  25% {
+    background-color: #4e5559;
+    background-position: 0% 90%;
+  }
+
+  85% {
+    background-color: #4e5559;
     background-position: 0% 0%;
   }
-  51% {
-    background-color: #4e5559;
-  }
-  59% {
-    background-color: #ffffff;
-    background-position: 0% 0%;
-  }
-  60% {
-    background-color: #4e5559;
-    background-position: 0% 100%;
-  }
-  80% {
-    background-position: 0% 0%;
-  }
-  81% {
-    background-color: #4e5559;
-  }
-  90%,
   100% {
-    background-color: #ffffff;
+    background-color: #fff;
   }
 }
 @keyframes trackBallSlide {
@@ -230,64 +209,20 @@ nav ul {
     opacity: 1;
     transform: scale(1) translateY(-14px);
   }
-  6% {
+  70% {
     opacity: 1;
-    transform: scale(0.9) translateY(5px);
+    transform: scale(0.4) translateY(36px);
   }
-  14% {
+
+  85% {
     opacity: 0;
     transform: scale(0.4) translateY(36px);
   }
-  15%,
-  19% {
+
+  90% {
     opacity: 0;
     transform: scale(0.4) translateY(-14px);
   }
-  28%,
-  29.99% {
-    opacity: 1;
-    transform: scale(1) translateY(-14px);
-  }
-  30% {
-    opacity: 1;
-    transform: scale(1) translateY(-14px);
-  }
-  36% {
-    opacity: 1;
-    transform: scale(0.9) translateY(5px);
-  }
-  44% {
-    opacity: 0;
-    transform: scale(0.4) translateY(36px);
-  }
-  45%,
-  49% {
-    opacity: 0;
-    transform: scale(0.4) translateY(-14px);
-  }
-  58%,
-  59.99% {
-    opacity: 1;
-    transform: scale(1) translateY(-14px);
-  }
-  60% {
-    opacity: 1;
-    transform: scale(1) translateY(-16px);
-  }
-  66% {
-    opacity: 1;
-    transform: scale(0.9) translateY(5px);
-  }
-  74% {
-    opacity: 0;
-    transform: scale(0.4) translateY(36px);
-  }
-  75%,
-  79% {
-    opacity: 0;
-    transform: scale(0.4) translateY(-14px);
-  }
-  88%,
   100% {
     opacity: 1;
     transform: scale(1) translateY(-14px);
@@ -297,66 +232,25 @@ nav ul {
   0% {
     transform: translateY(0);
   }
-  20% {
-    transform: translateY(8px);
+  85% {
+    transform: translateY(10px);
   }
-  30% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(8px);
-  }
-  60% {
-    transform: translateY(0);
-  }
-  80% {
-    transform: translateY(8px);
-  }
-  90% {
+  100% {
     transform: translateY(0);
   }
 }
-@keyframes nudgeText {
+@keyframes text {
   0% {
     transform: translateY(0);
+    color: var(--blue);
   }
-  20% {
+  85% {
     transform: translateY(2px);
+    color: var(--white);
   }
-  30% {
+  100% {
     transform: translateY(0);
-  }
-  50% {
-    transform: translateY(2px);
-  }
-  60% {
-    transform: translateY(0);
-  }
-  80% {
-    transform: translateY(2px);
-  }
-  90% {
-    transform: translateY(0);
-  }
-}
-@keyframes colorText {
-  21% {
-    color: #4e5559;
-  }
-  30% {
-    color: #ffffff;
-  }
-  51% {
-    color: #4e5559;
-  }
-  60% {
-    color: #ffffff;
-  }
-  81% {
-    color: #4e5559;
-  }
-  90% {
-    color: #ffffff;
+    color: var(--blue);
   }
 }
 
