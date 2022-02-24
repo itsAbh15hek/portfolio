@@ -1,5 +1,5 @@
 const body = document.querySelector("nav");
-const phone = document.querySelector(".phone");
+const phone = document.querySelector(".fa-phone-square-alt");
 const phoneNmb = document.querySelector(".phone-nmb");
 const hamburger = document.querySelector(".hamburger");
 const phoneIcon = document.querySelector(".fa-phone-square-alt");
